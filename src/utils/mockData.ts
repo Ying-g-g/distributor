@@ -817,86 +817,260 @@ export const mockDeliveryCases: DeliveryCase[] = [
   {
     id: 'del2',
     customerId: 'c3',
+    customer_name: 'Tech Startup Inc',
     productId: '3',
     status: 'In Progress',
     paymentDate: '2024-02-10',
+    payment_date: '2024-02-10',
     expectedDeliveryDate: '2024-03-05',
-    assignedPartner: 'p3'
+    expected_delivery_date: '2024-03-05',
+    assignedPartner: 'p3',
+    partner_id: 'p3',
+    deal_value: 3500
   },
   {
     id: 'del3',
     customerId: 'c5',
+    customer_name: 'Finance Plus',
     productId: '5',
     status: 'Completed',
     paymentDate: '2024-01-28',
+    payment_date: '2024-01-28',
     expectedDeliveryDate: '2024-02-15',
+    expected_delivery_date: '2024-02-15',
+    actual_delivery_date: '2024-02-13',
     assignedPartner: 'p1',
-    satisfactionRating: 4
+    partner_id: 'p1',
+    satisfactionRating: 4,
+    deal_value: 8000
   },
   {
     id: 'del4',
     customerId: 'c7',
+    customer_name: 'Education Plus',
     productId: '8',
     status: 'Completed',
     paymentDate: '2024-02-05',
+    payment_date: '2024-02-05',
     expectedDeliveryDate: '2024-02-18',
+    expected_delivery_date: '2024-02-18',
+    actual_delivery_date: '2024-02-17',
     assignedPartner: 'p2',
-    satisfactionRating: 4.5
+    partner_id: 'p2',
+    satisfactionRating: 4.5,
+    deal_value: 3000
   },
   {
     id: 'del5',
     customerId: 'c10',
+    customer_name: 'Smart City Projects',
     productId: '11',
     status: 'In Progress',
     paymentDate: '2024-01-31',
+    payment_date: '2024-01-31',
     expectedDeliveryDate: '2024-02-20',
-    assignedPartner: 'p1'
+    expected_delivery_date: '2024-02-20',
+    assignedPartner: 'p1',
+    partner_id: 'p1',
+    deal_value: 4200
   },
   {
     id: 'del6',
     customerId: 'c12',
+    customer_name: 'Fashion Retail Group',
     productId: '13',
     status: 'Pending',
     paymentDate: '2024-02-10',
+    payment_date: '2024-02-10',
     expectedDeliveryDate: '2024-02-25',
-    assignedPartner: 'p5'
+    expected_delivery_date: '2024-02-25',
+    assignedPartner: 'p5',
+    partner_id: 'p5',
+    deal_value: 1700
   },
   {
     id: 'del7',
     customerId: 'c4',
+    customer_name: 'Global Corp',
     productId: '4',
     status: 'Overdue',
     paymentDate: '2024-01-15',
+    payment_date: '2024-01-15',
     expectedDeliveryDate: '2024-02-10',
-    assignedPartner: 'p6'
+    expected_delivery_date: '2024-02-10',
+    assignedPartner: 'p6',
+    partner_id: 'p6',
+    deal_value: 2650
   },
   {
     id: 'del8',
     customerId: 'c9',
+    customer_name: 'Luxury Hotels Ltd',
     productId: '10',
     status: 'In Progress',
     paymentDate: '2024-02-08',
+    payment_date: '2024-02-08',
     expectedDeliveryDate: '2024-03-10',
-    assignedPartner: 'p8'
+    expected_delivery_date: '2024-03-10',
+    assignedPartner: 'p8',
+    partner_id: 'p8',
+    deal_value: 7000
   },
   {
     id: 'del9',
     customerId: 'c14',
+    customer_name: 'Organic Food Distributor',
     productId: '15',
     status: 'Completed',
     paymentDate: '2024-02-01',
+    payment_date: '2024-02-01',
     expectedDeliveryDate: '2024-02-17',
+    expected_delivery_date: '2024-02-17',
+    actual_delivery_date: '2024-02-16',
     assignedPartner: 'p5',
-    satisfactionRating: 5
+    partner_id: 'p5',
+    satisfactionRating: 5,
+    deal_value: 7500
   },
   {
     id: 'del10',
     customerId: 'c11',
+    customer_name: 'Medical Research Corp',
     productId: '12',
     status: 'Pending',
     paymentDate: '2024-02-15',
+    payment_date: '2024-02-15',
     expectedDeliveryDate: '2024-03-20',
-    assignedPartner: 'p6'
+    expected_delivery_date: '2024-03-20',
+    assignedPartner: 'p6',
+    partner_id: 'p6',
+    deal_value: 9200
+  },
+  {
+    id: 'del11',
+    customerId: 'c15',
+    customer_name: 'Property Development Co',
+    productId: '14',
+    status: 'Pending',
+    paymentDate: '2024-02-18',
+    payment_date: '2024-02-18',
+    expectedDeliveryDate: '2024-03-15',
+    expected_delivery_date: '2024-03-15',
+    deal_value: 3800
+  },
+  {
+    id: 'del12',
+    customerId: 'c16',
+    customer_name: 'Software Solutions Inc',
+    productId: '1',
+    status: 'Pending',
+    paymentDate: '2024-02-19',
+    payment_date: '2024-02-19',
+    expectedDeliveryDate: '2024-03-18',
+    expected_delivery_date: '2024-03-18',
+    deal_value: 2400
+  },
+  {
+    id: 'del13',
+    customerId: 'c17',
+    customer_name: 'Banking & Finance Ltd',
+    productId: '8',
+    status: 'In Progress',
+    paymentDate: '2024-02-12',
+    payment_date: '2024-02-12',
+    expectedDeliveryDate: '2024-03-08',
+    expected_delivery_date: '2024-03-08',
+    assignedPartner: 'p2',
+    partner_id: 'p2',
+    deal_value: 3000
+  },
+  {
+    id: 'del14',
+    customerId: 'c18',
+    customer_name: 'Manufacturing Giants',
+    productId: '7',
+    status: 'Completed',
+    paymentDate: '2024-01-20',
+    payment_date: '2024-01-20',
+    expectedDeliveryDate: '2024-02-12',
+    expected_delivery_date: '2024-02-12',
+    actual_delivery_date: '2024-02-11',
+    assignedPartner: 'p5',
+    partner_id: 'p5',
+    satisfactionRating: 4.8,
+    deal_value: 6200
+  },
+  {
+    id: 'del15',
+    customerId: 'c19',
+    customer_name: 'Healthcare Network',
+    productId: '12',
+    status: 'In Progress',
+    paymentDate: '2024-02-14',
+    payment_date: '2024-02-14',
+    expectedDeliveryDate: '2024-03-25',
+    expected_delivery_date: '2024-03-25',
+    assignedPartner: 'p6',
+    partner_id: 'p6',
+    deal_value: 9200
+  }
+];
+
+export const mockPromoCampaigns: PromoCampaign[] = [
+  {
+    id: 'pc1',
+    name: 'Q1 2024 New Year Promotion',
+    description: 'Special discount campaign for Q1 2024',
+    startDate: '2024-01-01',
+    endDate: '2024-03-31',
+    status: 'Active',
+    totalCodes: 50,
+    timesRedeemed: 28,
+    revenueGenerated: 84000
+  },
+  {
+    id: 'pc2',
+    name: 'Webinar Attendee Exclusive',
+    description: 'Discount codes for webinar participants',
+    startDate: '2024-02-01',
+    endDate: '2024-02-29',
+    status: 'Active',
+    totalCodes: 100,
+    timesRedeemed: 45,
+    revenueGenerated: 67500
+  },
+  {
+    id: 'pc3',
+    name: 'VIP Customer Appreciation',
+    description: 'Special rates for VIP customers',
+    startDate: '2024-01-15',
+    endDate: '2024-04-15',
+    status: 'Active',
+    totalCodes: 30,
+    timesRedeemed: 22,
+    revenueGenerated: 110000
+  },
+  {
+    id: 'pc4',
+    name: 'Early Bird December 2023',
+    description: 'End of year early bird promotion',
+    startDate: '2023-12-01',
+    endDate: '2023-12-31',
+    status: 'Ended',
+    totalCodes: 75,
+    timesRedeemed: 68,
+    revenueGenerated: 204000
+  },
+  {
+    id: 'pc5',
+    name: 'Referral Program Launch',
+    description: 'Codes for referred customers',
+    startDate: '2024-02-15',
+    endDate: '2024-05-15',
+    status: 'Active',
+    totalCodes: 200,
+    timesRedeemed: 12,
+    revenueGenerated: 18000
   }
 ];
 

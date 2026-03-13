@@ -44,9 +44,10 @@ export interface PromoCampaign {
   startDate: string;
   endDate: string;
   status: 'Draft' | 'Active' | 'Ended';
-  codes: PromoCode[];
-  totalRedemptions: number;
-  revenue: number;
+  codes?: PromoCode[];
+  totalCodes: number;
+  timesRedeemed: number;
+  revenueGenerated: number;
 }
 
 export interface PromoCode {

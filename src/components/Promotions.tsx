@@ -1,31 +1,10 @@
 import React, { useState } from 'react';
 import { Plus, X, Zap } from 'lucide-react';
+import { mockPromoCampaigns } from '../utils/mockData';
+import { PromoCampaign } from '../types';
 
 export default function Promotions() {
-  const [campaigns, setCampaigns] = useState([
-    {
-      id: '1',
-      name: 'Valentine Promo 2024',
-      description: 'Special discount for Valentine',
-      status: 'Active' as const,
-      startDate: '2024-02-01',
-      endDate: '2024-02-14',
-      codes: [{ code: 'LOVE10', redemptions: 24, usageLimit: 100 }],
-      totalRedemptions: 24,
-      revenue: 28800
-    },
-    {
-      id: '2',
-      name: 'New Year Campaign',
-      description: 'New year new skills',
-      status: 'Ended' as const,
-      startDate: '2024-01-01',
-      endDate: '2024-01-31',
-      codes: [{ code: 'NEWYEAR15', redemptions: 42, usageLimit: 200 }],
-      totalRedemptions: 42,
-      revenue: 58800
-    }
-  ]);
+  const [campaigns, setCampaigns] = useState<PromoCampaign[]>(mockPromoCampaigns);
 
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [selectedCampaign, setSelectedCampaign] = useState<typeof campaigns[0] | null>(null);
@@ -50,8 +29,9 @@ export default function Promotions() {
       startDate: newCampaign.startDate,
       endDate: newCampaign.endDate,
       codes: [],
-      totalRedemptions: 0,
-      revenue: 0
+      totalCodes: 0,
+      timesRedeemed: 0,
+      revenueGenerated: 0
     };
 
     setCampaigns([...campaigns, campaign]);
@@ -122,11 +102,11 @@ export default function Promotions() {
               </div>
               <div className="flex justify-between">
                 <span className="text-sm text-gray-600">Total Redemptions:</span>
-                <span className="text-sm font-bold text-green-600">{campaign.totalRedemptions}</span>
+                <span className="text-sm font-bold text-green-600">{campaign.timesRedeemed}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-sm text-gray-600">Revenue Generated:</span>
-                <span className="text-sm font-bold text-green-600">RM {campaign.revenue.toLocaleString()}</span>
+                <span className="text-sm font-bold text-green-600">RM {campaign.revenueGenerated.toLocaleString()}</span>
               </div>
             </div>
 
@@ -230,11 +210,11 @@ export default function Promotions() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Total Redemptions</p>
-                  <p className="text-2xl font-bold text-green-600">{selectedCampaign.totalRedemptions}</p>
+                  <p className="text-2xl font-bold text-green-600">{selectedCampaign.timesRedeemed}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Revenue</p>
-                  <p className="text-2xl font-bold text-green-600">RM {(selectedCampaign.revenue / 1000).toFixed(0)}K</p>
+                  <p className="text-2xl font-bold text-green-600">RM {(selectedCampaign.revenueGenerated / 1000).toFixed(0)}K</p>
                 </div>
               </div>
 
