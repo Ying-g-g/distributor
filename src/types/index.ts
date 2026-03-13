@@ -104,12 +104,18 @@ export interface Deal {
 export interface DeliveryCase {
   id: string;
   customerId: string;
+  customer_name: string;
   productId: string;
   status: 'Pending' | 'In Progress' | 'Completed' | 'Overdue';
   paymentDate: string;
+  payment_date: string;
   expectedDeliveryDate: string;
+  expected_delivery_date: string;
+  actual_delivery_date?: string;
   assignedPartner?: string;
+  partner_id?: string;
   satisfactionRating?: number;
+  deal_value: number;
 }
 
 export interface Escalation {

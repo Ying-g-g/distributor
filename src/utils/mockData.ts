@@ -801,12 +801,18 @@ export const mockDeliveryCases: DeliveryCase[] = [
   {
     id: 'del1',
     customerId: 'c1',
+    customer_name: 'ABC Manufacturing',
     productId: '1',
     status: 'Completed',
     paymentDate: '2024-02-01',
+    payment_date: '2024-02-01',
     expectedDeliveryDate: '2024-02-15',
+    expected_delivery_date: '2024-02-15',
+    actual_delivery_date: '2024-02-14',
     assignedPartner: 'p1',
-    satisfactionRating: 5
+    partner_id: 'p1',
+    satisfactionRating: 5,
+    deal_value: 2400
   },
   {
     id: 'del2',
