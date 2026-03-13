@@ -98,7 +98,7 @@ export default function Promotions() {
               </div>
               <div className="flex justify-between">
                 <span className="text-sm text-gray-600">Codes Generated:</span>
-                <span className="text-sm font-bold text-blue-600">{campaign.codes.length}</span>
+                <span className="text-sm font-bold text-blue-600">{campaign.totalCodes}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-sm text-gray-600">Total Redemptions:</span>
@@ -178,7 +178,7 @@ export default function Promotions() {
               <div className="border-t pt-4">
                 <h4 className="font-semibold text-gray-900 mb-4">Discount Codes</h4>
                 <div className="space-y-3">
-                  {selectedCampaign.codes.length > 0 ? (
+                  {selectedCampaign.codes && selectedCampaign.codes.length > 0 ? (
                     selectedCampaign.codes.map(code => (
                       <div key={code.code} className="bg-gray-50 p-4 rounded-lg">
                         <div className="flex justify-between items-start">
@@ -198,7 +198,7 @@ export default function Promotions() {
                       </div>
                     ))
                   ) : (
-                    <p className="text-gray-600 py-4">No codes generated yet</p>
+                    <p className="text-gray-600 py-4">No detailed code data available. Total codes: {selectedCampaign.totalCodes}</p>
                   )}
                 </div>
               </div>
@@ -206,7 +206,7 @@ export default function Promotions() {
               <div className="border-t pt-4 grid grid-cols-3 gap-4">
                 <div>
                   <p className="text-sm text-gray-600">Total Codes</p>
-                  <p className="text-2xl font-bold text-blue-600">{selectedCampaign.codes.length}</p>
+                  <p className="text-2xl font-bold text-blue-600">{selectedCampaign.totalCodes}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Total Redemptions</p>
